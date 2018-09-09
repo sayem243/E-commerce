@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fruits</title>
+
+
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+
+<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<script src='jquery-1.8.3.min.js'></script>
+	<script src='jquery.elevatezoom.js'></script>
+
+
+<!-- css -->
+
+<style>
+		/* styles unrelated to zoom */
+		* { border:0; margin:0; padding:0; }
+		p { position:absolute; top:3px; right:28px; color:#555; font:bold 13px/1 sans-serif;}
+
+		/* these styles are for the demo, but are not required for the plugin */
+		.zoom {
+			display:inline-block;
+			position: relative;
+		}
+		
+		/* magnifying glass icon */
+		.zoom:after {
+			content:'';
+			display:block; 
+			width:33px; 
+			height:33px; 
+			position:absolute; 
+			top:0;
+			right:0;
+			background:url(icon.png);
+		}
+
+		.zoom img {
+			display: block;
+		}
+
+		.zoom img::selection { background-color: transparent; }
+
+		#ex2 img:hover { cursor: url(grab.cur), default; }
+		#ex2 img:active { cursor: url(grabbed.cur), default; }
+	</style>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+	<script src='jquery.zoom.js'></script>
+	<script>
+		$(document).ready(function(){
+			$('#ex1').zoom();
+			$('#ex2').zoom({ on:'grab' });
+			$('#ex3').zoom({ on:'click' });			 
+			$('#ex4').zoom({ on:'toggle' });
+		});
+	</script>
+
+
+</head>
+<body>
+
+	<div class="header">
+	<h1>See Our Fruits Items</h1>
+
+	</div>
+	
+	<div class="container">
+   <div class="row">
+    <div class="col-sm-12 col-md-4">
+    	<div class="container-1">
+      <div class="card-header">Apple</div>
+     <span class='zoom' id='ex1'> <img src="Pic/apple.JPG" class="photo" alt="404"></span>
+      <div class="overlay">Add to shopping Bag</div>
+    </div>
+    </div>
+
+    
+    <div class="col-sm-12 col-md-4">
+    	<div class="container-2">
+       <div class="card-header">Delicious Graps</div>
+       <span class='zoom' id='ex2'><a href="meat.html" class="link"><img src="Pic/graps.JPG" class="photo" alt="404"></a></span>
+       <div class="overlay">Add to shopping Bag</div>
+    </div>
+</div>
+
+    <div class="col-sm-12 col-md-4">
+    	<div class="container-2">
+       <div class="card-header">Fresh Mango</div>
+      	<span class='zoom' id='ex3'> <img src="Pic/mango.JPG" class="photo" alt="404"></span>
+        <div class="overlay">Add to shopping Bag</div>
+    </div>
+</div>
+  </div>
+</div>
+
+</body>
+
+</html>
